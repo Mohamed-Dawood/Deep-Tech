@@ -1,0 +1,90 @@
+@import '../helpers/mixins';
+nav {
+  background-color: $primary-color;
+
+  .navbar-brand {
+    img {
+      width: 227px;
+      height: 40px;
+    }
+  }
+
+  .navbar-nav {
+    gap: 16px;
+  }
+
+  .nav-item {
+    button {
+      background-color: $tertiary-color;
+      padding: 0.5rem 0.3rem;
+    }
+    .language {
+      &:hover {
+        background-color: #476b66;
+      }
+    }
+  }
+
+  .dropdown-toggle::after {
+    display: none;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+
+  .dropdown-item:hover {
+    background-color: $secondary-color;
+  }
+
+  .nav-item.dropdown .nav-link {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+
+    svg {
+      transition: $transition-duration;
+      margin-left: 7px;
+    }
+
+    &:hover svg,
+    &.show svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  .navbar-toggler {
+    border-color: transparent;
+    font-size: 24px;
+    &:focus {
+      box-shadow: none;
+    }
+    &[aria-expanded='true'] {
+      border-color: $main-text-color;
+    }
+  }
+}
+@include breakpoints(medium) {
+  nav {
+    .container {
+      flex-direction: row-reverse;
+      justify-content: unset !important;
+      .navbar-brand {
+        flex-grow: 1;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+      }
+      .nav-item {
+        > button {
+          padding: 0.5rem;
+        }
+      }
+      .language {
+        width: fit-content;
+        padding: 0.5rem;
+      }
+    }
+  }
+}

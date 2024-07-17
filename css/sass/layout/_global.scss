@@ -1,0 +1,15 @@
+@use '../variables/variables' as *;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+ul {
+  list-style: none;
+}
+body {
+  font-family: $font-family-inter;
+  font-weight: 500;
+  position: relative;
+}

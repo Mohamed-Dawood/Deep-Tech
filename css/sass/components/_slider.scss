@@ -1,0 +1,42 @@
+.slider {
+  padding-top: $main-padding;
+  padding-bottom: $main-padding;
+  position: relative;
+  .slider-container {
+    overflow: hidden;
+    position: relative;
+    .slider-content {
+      display: flex;
+      height: 100%;
+      width: calc(267px * 16);
+      gap: 15px;
+      .item {
+        border: 3px solid #efeaea;
+        height: 218px;
+        width: 267px;
+        border-radius: 1rem;
+        margin-right: 5px;
+        cursor: pointer;
+        animation: translateinfinite 15s linear infinite;
+        @extend %Centering;
+        img {
+          max-width: 200px;
+          max-height: 80px;
+        }
+      }
+      &:hover .item {
+        animation-play-state: paused;
+      }
+    }
+  }
+  h2 {
+    text-align: center;
+    margin: 2.5rem 0;
+  }
+}
+
+@keyframes translateinfinite {
+  to {
+    transform: translateX(calc(-267px * 8));
+  }
+}

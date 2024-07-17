@@ -1,0 +1,18 @@
+@use './sass/variables/variables' as *;
+
+@use './sass/helpers/mixins';
+
+@import './sass/layout/global';
+@import './sass/components/scroll-top';
+@import './sass/components/message-us';
+@import './sass/components/button';
+@import './sass/layout/header.scss';
+@import './sass/components/under-line-text';
+@import './sass/pages/main-section.scss';
+@import './sass/components/trust.scss';
+@import './sass/components/header-section';
+@import './sass/pages/advantages.scss';
+@import './sass/components/carousel.scss';
+@import './sass/components/slider';
+@import './sass/pages/client-review.scss';
+@import './sass/layout/footer.scss';

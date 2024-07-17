@@ -1,0 +1,65 @@
+.advantages {
+  padding-top: $main-padding;
+  padding-bottom: $main-padding;
+  background-color: $primary-color;
+  color: $main-text-color;
+  section {
+    padding-top: $main-padding;
+    padding-bottom: $main-padding;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .advantages-image {
+      flex-basis: 48%;
+      img {
+        max-width: 100%;
+      }
+    }
+    .advantages-list {
+      flex-basis: 48%;
+      width: 100%;
+      ul {
+        margin: 0;
+        padding: 0;
+        li {
+          background-color: #3c5855;
+          padding: 0.7rem;
+          margin-bottom: 1rem;
+          border-radius: 8px;
+          transition: $transition-duration;
+          &:hover {
+            cursor: pointer;
+            box-shadow: inset -0.3px 0.5px 2px 0.1px $tertiary-color;
+          }
+          div {
+            display: flex;
+            align-items: center;
+            img {
+              width: 50px;
+              height: 50px;
+              margin-right: 1rem;
+            }
+            h4 {
+              margin: 0;
+              max-width: 198px;
+            }
+          }
+          p {
+            padding-left: 66px;
+            color: $p-color;
+            margin: 5px 0 0 0;
+          }
+        }
+      }
+    }
+  }
+}
+@include breakpoints(medium) {
+  .advantages {
+    section {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+}

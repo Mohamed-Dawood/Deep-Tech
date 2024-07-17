@@ -1,0 +1,19 @@
+.under-line-text {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  &::before {
+    @extend %under-line;
+  }
+}
+
+%under-line {
+  content: '';
+  background-color: $tertiary-color;
+  width: 100%;
+  height: 20px;
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  z-index: -1;
+}

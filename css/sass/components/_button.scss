@@ -1,0 +1,9 @@
+button {
+  border-radius: 0.5rem !important;
+  outline: none;
+  border: none;
+  font-weight: 700;
+  &:hover {
+    opacity: $opacity;
+  }
+}

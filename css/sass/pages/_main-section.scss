@@ -1,0 +1,59 @@
+@import '../helpers/mixins';
+
+.main {
+  padding: $main-padding 0;
+  background: linear-gradient(to right, $main-text-color, $secondary-color);
+  .container {
+    min-height: 490px;
+    @extend %Centering;
+    .main-text {
+      flex-basis: 50%;
+      h1 {
+        color: $secondary-text-color;
+        line-height: 56px;
+        font-weight: bold;
+      }
+      p {
+        color: $secondary-text-color;
+        font-weight: 500;
+        margin: 0;
+      }
+      button {
+        @extend %Centering;
+        gap: 0.5rem;
+        margin-top: 1.5rem;
+        padding: 1rem 0;
+        width: 267px;
+        background-color: $primary-color;
+        color: $main-text-color;
+        img {
+          width: 15px;
+          height: 15px;
+        }
+        &:hover {
+          opacity: $opacity;
+        }
+      }
+    }
+    .main-image {
+      flex-basis: 50%;
+      position: relative;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}
+@include breakpoints(medium) {
+  .main {
+    .container {
+      flex-direction: column-reverse;
+      .main-text {
+        text-align: center;
+        button {
+          margin: 1rem auto;
+        }
+      }
+    }
+  }
+}
