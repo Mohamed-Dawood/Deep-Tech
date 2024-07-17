@@ -2,7 +2,7 @@ let scrollTop = document.querySelector('.scroll-top');
 
 window.onscroll = function () {
   if (scrollY >= 400) {
-    scrollTop.style.display = `flex`;
+    scrollTop.style.display = `block`;
   } else {
     scrollTop.style.display = `none`;
   }

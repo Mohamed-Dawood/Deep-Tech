@@ -10,7 +10,6 @@
   border-radius: 50% !important;
   border: none;
   outline: none;
-  @extend %Centering;
   z-index: 9;
   transition: $transition-duration;
   box-shadow: 0px 2px 6px 1px #8c8c8c;
