@@ -30,25 +30,6 @@ nav {
     display: none;
   }
 
-  .dropdown-toggle {
-    position: relative;
-    &::before {
-      content: '';
-      height: 5px;
-      width: calc(
-        100% - 37px
-      ); // padding left 8 & right 8 =16, icon 14, margin-left 7
-      position: absolute;
-      background-color: $tertiary-color;
-      bottom: 0;
-      transition: $transition-duration;
-      opacity: 0;
-    }
-    &:hover::before {
-      opacity: 1;
-    }
-  }
-
   .dropdown:hover .dropdown-menu {
     display: block;
     margin-top: 0.125rem;
@@ -108,6 +89,29 @@ nav {
       .language {
         width: fit-content;
         padding: 0.5rem;
+      }
+    }
+  }
+
+  @include breakpoints(large) {
+    .dropdown-toggle {
+      position: relative;
+
+      &::before {
+        content: '';
+        height: 5px;
+        width: calc(
+          100% - 37px
+        ); // padding left 8 & right 8 =16, icon 14, margin-left 7
+        position: absolute;
+        background-color: $tertiary-color;
+        bottom: 0;
+        transition: $transition-duration;
+        opacity: 0;
+      }
+
+      &:hover::before {
+        opacity: 1;
       }
     }
   }

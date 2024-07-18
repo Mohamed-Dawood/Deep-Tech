@@ -131,22 +131,6 @@ nav .nav-item .language:hover {
 nav .dropdown-toggle::after {
   display: none;
 }
-nav .dropdown-toggle {
-  position: relative;
-}
-nav .dropdown-toggle::before {
-  content: "";
-  height: 5px;
-  width: calc(100% - 37px);
-  position: absolute;
-  background-color: #f4a237;
-  bottom: 0;
-  transition: 0.3s;
-  opacity: 0;
-}
-nav .dropdown-toggle:hover::before {
-  opacity: 1;
-}
 nav .dropdown:hover .dropdown-menu {
   display: block;
   margin-top: 0.125rem;
@@ -194,6 +178,24 @@ nav .navbar-toggler[aria-expanded=true] {
     width: -moz-fit-content;
     width: fit-content;
     padding: 0.5rem;
+  }
+}
+@media (min-width: 1200px) {
+  nav .dropdown-toggle {
+    position: relative;
+  }
+  nav .dropdown-toggle::before {
+    content: "";
+    height: 5px;
+    width: calc(100% - 37px);
+    position: absolute;
+    background-color: #f4a237;
+    bottom: 0;
+    transition: 0.3s;
+    opacity: 0;
+  }
+  nav .dropdown-toggle:hover::before {
+    opacity: 1;
   }
 }
 
