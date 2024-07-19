@@ -16,14 +16,25 @@ scrollTop.onclick = function () {
   });
 };
 
-var swiper = new Swiper('.mySwiper', {
-  spaceBetween: 30,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  rtl: document.body.getAttribute('dir') === 'rtl',
-});
+// var swiper = new Swiper('.mySwiper', {
+//   spaceBetween: 30,
+//   pagination: {
+//     el: '.swiper-pagination',
+//     clickable: true,
+//   },
+//   rtl: document.body.getAttribute('dir') === 'rtl',
+// });
+
+function reviewerSwiper() {
+  new Swiper('.mySwiper', {
+    spaceBetween: 30,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    rtl: document.body.style.direction === 'rtl',
+  });
+}
 
 // change img src when change dir
 
@@ -47,6 +58,7 @@ function changeDir() {
       (image) => (image.src = 'images/Review/Right-Quote.png')
     );
   }
+  reviewerSwiper();
 }
 function toggleDirection() {
   const body = document.body;
@@ -69,3 +81,4 @@ document
   .addEventListener('click', toggleDirection);
 
 changeDir();
+reviewerSwiper();
