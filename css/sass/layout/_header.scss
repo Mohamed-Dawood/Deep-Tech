@@ -20,9 +20,14 @@ nav {
       padding: 0.5rem 0.3rem;
     }
     .language {
+      background-color: transparent;
       &:hover {
         background-color: #476b66;
       }
+    }
+    svg {
+      transition: $transition-duration;
+      margin-left: 6px;
     }
   }
 
@@ -43,11 +48,6 @@ nav {
     display: flex;
     align-items: center;
     font-weight: 500;
-
-    svg {
-      transition: $transition-duration;
-      margin-left: 7px;
-    }
 
     &:hover svg,
     &.show svg {
@@ -101,8 +101,8 @@ nav {
         content: '';
         height: 5px;
         width: calc(
-          100% - 37px
-        ); // padding left 8 & right 8 =16, icon 14, margin-left 7
+          100% - 36px
+        ); // padding left 8 & right 8 =16, icon 14, margin-left-icon 6
         position: absolute;
         background-color: $tertiary-color;
         bottom: 0;

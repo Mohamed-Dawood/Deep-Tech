@@ -125,8 +125,15 @@ nav .nav-item button {
   background-color: #f4a237;
   padding: 0.5rem 0.3rem;
 }
+nav .nav-item .language {
+  background-color: transparent;
+}
 nav .nav-item .language:hover {
   background-color: #476b66;
+}
+nav .nav-item svg {
+  transition: 0.3s;
+  margin-left: 6px;
 }
 nav .dropdown-toggle::after {
   display: none;
@@ -142,10 +149,6 @@ nav .nav-item.dropdown .nav-link {
   display: flex;
   align-items: center;
   font-weight: 500;
-}
-nav .nav-item.dropdown .nav-link svg {
-  transition: 0.3s;
-  margin-left: 7px;
 }
 nav .nav-item.dropdown .nav-link:hover svg, nav .nav-item.dropdown .nav-link.show svg {
   transform: rotate(180deg);
@@ -187,7 +190,7 @@ nav .navbar-toggler[aria-expanded=true] {
   nav .dropdown-toggle::before {
     content: "";
     height: 5px;
-    width: calc(100% - 37px);
+    width: calc(100% - 36px);
     position: absolute;
     background-color: #f4a237;
     bottom: 0;
@@ -287,6 +290,7 @@ nav .navbar-toggler[aria-expanded=true] {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  direction: ltr;
 }
 .trust .container section .image {
   width: 140px;
@@ -362,7 +366,6 @@ nav .navbar-toggler[aria-expanded=true] {
 }
 .advantages section .advantages-list ul li div h4 {
   margin: 0;
-  max-width: 198px;
 }
 .advantages section .advantages-list ul li p {
   padding-left: 66px;
@@ -438,7 +441,7 @@ nav .navbar-toggler[aria-expanded=true] {
   line-height: 24px;
   color: #1e302e;
   font-size: 16px;
-  max-width: 558px;
+  max-width: 500px;
 }
 .swiper .swiper-slide .reviewer-words .info h2 {
   font-size: 39px;
@@ -510,7 +513,7 @@ nav .navbar-toggler[aria-expanded=true] {
   border-radius: 1rem;
   margin-right: 5px;
   cursor: pointer;
-  animation: translateinfinite 15s linear infinite;
+  animation: translateinfinite 10s linear infinite;
 }
 .slider .slider-container .slider-content .item img {
   max-width: 200px;
@@ -554,7 +557,10 @@ footer .content .container {
 }
 footer .content .container .details {
   max-width: 331px;
-  min-width: 230px;
+  flex-basis: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: unset;
 }
 footer .content .container .details img {
   width: 227px;
@@ -564,11 +570,17 @@ footer .content .container .details p {
   color: #cad8d5;
   margin-top: 1.5rem;
 }
-footer .content .container ul {
+footer .content .container div {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 70%;
+  width: 100%;
+}
+footer .content .container div ul {
   padding: 0;
   margin: 0;
 }
-footer .content .container ul h4 {
+footer .content .container div ul h4 {
   font-size: 25px;
   font-weight: 700;
   margin-bottom: 1.5rem;
@@ -576,12 +588,12 @@ footer .content .container ul h4 {
      -moz-user-select: none;
           user-select: none;
 }
-footer .content .container ul li {
+footer .content .container div ul li {
   margin: 0.5rem 0;
   transition: 0.3s;
   font-weight: 500;
 }
-footer .content .container ul li:hover {
+footer .content .container div ul li:hover {
   color: #f4a237;
   cursor: pointer;
 }
@@ -596,7 +608,7 @@ footer section .container {
 }
 footer section .container ul {
   display: flex;
-  gap: 20px;
+  gap: 35px;
   margin: 0;
 }
 footer section .container ul li {
@@ -612,6 +624,15 @@ footer section .container .copyright p {
 @media (max-width: 992px) {
   footer .content .container {
     flex-direction: column;
+  }
+  footer .content .container div {
+    flex-direction: column;
+  }
+  footer .content .container div ul {
+    margin-top: 1.5rem;
+  }
+  footer section {
+    direction: ltr;
   }
   footer section .container {
     flex-direction: column-reverse;
