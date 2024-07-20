@@ -29,6 +29,9 @@ nav {
       transition: $transition-duration;
       margin-left: 6px;
     }
+    .nav-link {
+      font-weight: 500;
+    }
   }
 
   .dropdown-toggle::after {
@@ -44,14 +47,14 @@ nav {
     background-color: $secondary-color;
   }
 
-  .nav-item.dropdown .nav-link {
-    display: flex;
-    align-items: center;
-    font-weight: 500;
-
-    &:hover svg,
-    &.show svg {
-      transform: rotate(180deg);
+  .nav-item.dropdown {
+    .nav-link {
+      display: flex;
+      align-items: center;
+      &:hover svg,
+      &.show svg {
+        transform: rotate(180deg);
+      }
     }
   }
 
