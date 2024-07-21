@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 * {
   box-sizing: border-box;
   padding: 0;
@@ -25,6 +26,10 @@ nav .nav-item svg {
 }
 nav .language p {
   margin-left: 0.5rem !important;
+}
+
+.main {
+  background: linear-gradient(to left, #fff, #fdf2e1) !important;
 }
 
 .advantages .advantages-list div img {

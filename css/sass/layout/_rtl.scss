@@ -1,4 +1,6 @@
 @import './global';
+@import '../variables/variables';
+
 html,
 body {
   direction: rtl;
@@ -15,6 +17,13 @@ nav {
       margin-left: 0.5rem !important;
     }
   }
+}
+.main {
+  background: linear-gradient(
+    to left,
+    $main-text-color,
+    $secondary-color
+  ) !important;
 }
 
 .advantages {
