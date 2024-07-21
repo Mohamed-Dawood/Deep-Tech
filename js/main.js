@@ -27,12 +27,13 @@ scrollTop.onclick = function () {
 
 function reviewerSwiper() {
   new Swiper('.mySwiper', {
-    spaceBetween: 30,
+    spaceBetween: 0,
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
     },
     rtl: document.body.style.direction === 'rtl',
+    centeredSlides: true,
   });
 }
 
@@ -41,6 +42,7 @@ function reviewerSwiper() {
 function changeDir() {
   let arrowTopLeft = document.querySelector('.arrow-top');
   let imageQuote = document.querySelectorAll('.image-quote');
+  let swiperSlide = document.querySelector('.swiper-slide');
 
   const body = document.body;
 
@@ -50,8 +52,8 @@ function changeDir() {
 
   if (direction === 'rtl') {
     arrowTopLeft.src = 'images/Arrow-Top-Right.png';
-
     imageQuote.forEach((image) => (image.src = 'images/Review/Left-Quote.png'));
+    swiperSlide.style.margin = '0 0 0 0';
   } else {
     arrowTopLeft.src = 'images/Arrow-Top-Left.png';
     imageQuote.forEach(
